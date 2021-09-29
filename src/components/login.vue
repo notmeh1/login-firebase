@@ -1,5 +1,5 @@
 <template>
-  <v-card class="text-center">
+  <v-card class="text-center" flat>
     <v-card-title class="justify-center"
       ><h1>Entra a tu cuenta</h1>
     </v-card-title>
@@ -34,7 +34,7 @@
         class="my-2 rounded-pill"
         color="success"
         width="200px"
-        @click="submit()"
+        @click="logIn()"
         :disabled="!valid"
         >Ingresar</v-btn
       >
@@ -59,7 +59,7 @@ export default {
     },
   }),
   methods: {
-    submit() {
+    logIn() {
       const auth = getAuth();
       signInWithEmailAndPassword(
         auth,
