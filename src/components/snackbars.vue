@@ -18,6 +18,15 @@
       <v-icon class="mx-3">mdi-alert-circle</v-icon>
       {{ logOut.text }}
     </v-snackbar>
+        <v-snackbar
+      v-model="errorLog.snackbar"
+      :timeout="errorLog.timeout"
+      color="error"
+      right
+    >
+      <v-icon class="mx-3">mdi-alert-circle</v-icon>
+      {{ errorLog.text }}
+    </v-snackbar>
   </div>
 </template>
 
@@ -31,6 +40,9 @@ export default {
     logOut() {
       return this.$store.state.snackbar.logOutAlert;
     },
+    errorLog() {
+      return this.$store.state.snackbar.errorLogAlert;
+    }
   },
 };
 </script>

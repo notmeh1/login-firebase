@@ -78,6 +78,7 @@ export default {
           const errorCode = error.code;
           const errorMessage = error.message;
           console.error(errorCode, errorMessage);
+          this.$store.state.snackbar.errorLogAlert.snackbar = true
         });
       console.log(
         "email: ",

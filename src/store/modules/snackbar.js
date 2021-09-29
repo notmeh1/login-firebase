@@ -11,5 +11,10 @@ export const snackbarModule = {
       timeout: 2500,
       text: "Has salido exitosamente!",
     },
+    errorLogAlert: {
+      snackbar: false,
+      timeout: 2500,
+      text: "La datos ingresados no existen",
+    },
   },
 };
