@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <Navbar/>
+    <Navbar />
     <v-main>
       <router-view />
       <v-btn class="switchMode" icon><v-icon>mdi-lightbulb</v-icon></v-btn>
@@ -9,15 +9,13 @@
 </template>
 
 <script>
-import Navbar from "./components/navbar.vue"
+import Navbar from "./components/navbar.vue";
 export default {
   name: "App",
-  data: () => ({
-    
-  }),
+  data: () => ({}),
   components: {
     Navbar,
-  }
+  },
 };
 </script>
 
