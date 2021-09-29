@@ -8,10 +8,25 @@
       <v-toolbar-items class="hidden-sm-and-down">
         <v-btn text :to="{ name: 'Home' }" class="rounded-pill"> Inicio </v-btn>
 
-        <v-btn text :to="{ name: 'About' }" class="rounded-pill">
+        <v-btn
+          text
+          :to="{ name: 'About' }"
+          class="rounded-pill"
+          v-if="getUserData"
+        >
           Acerca
         </v-btn>
       </v-toolbar-items>
     </v-app-bar>
   </div>
 </template>
+
+<script>
+export default {
+  computed: {
+    getUserData() {
+      return this.$store.state.login.userData.email;
+    },
+  },
+};
+</script>

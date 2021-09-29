@@ -14,7 +14,7 @@ export const snackbarModule = {
     errorLogAlert: {
       snackbar: false,
       timeout: 2500,
-      text: "La datos ingresados no existen",
+      text: "La cuenta ingresada no existe",
     },
   },
 };
